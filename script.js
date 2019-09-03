@@ -49,21 +49,22 @@ function oneHunThrNn(num){
     }
 }
 
-let x = document.getElementById("numbers")
-for(i=1;i<=1000;i++){
+
+for(i=1;i<=1000;i++){let spanElement = document.createElement("span");
     if(i>=1 && i<=19){
         
-       console.log(numbersOneThruNineteen(i))}
+   document.write(numbersOneThruNineteen(i) + ", ")}
     else if(i>=20 && i<=99){
         
-        console.log(numbersTwentyThruNinetyNine(i))
+       document.write(numbersTwentyThruNinetyNine(i) + ", ")
     }
     else if(i>=100 && i <=999){
-        console.log(oneHunThrNn(i))
+        document.write(oneHunThrNn(i) + ", ")
     }
     else {
-        console.log( "one-thousand")
+        document.write( "one-thousand")
     }
+   
 }
     
 
