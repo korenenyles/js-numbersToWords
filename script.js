@@ -14,9 +14,14 @@ const numbericHunderedNames = [100,200,300,400,500,600,700,800,900]
 const thousandNames = ["one thousand"]
 
 const numbericThousandNames = [1000]
+const container = document.getElementById("results")
 
 function numbersOneThruNineteen(num){
+    // let newDiv = document.createElement("div")
+    // newDiv.innerHTML = oneNames[num]
+    // container.appendChild(newDiv)
 return oneNames[num];
+
 }
 
 
@@ -49,24 +54,28 @@ function oneHunThrNn(num){
     }
 }
 
-
-for(i=1;i<=1000;i++){let spanElement = document.createElement("span");
+let numbersString = ""
+for(i=1;i<=1000;i++){
     if(i>=1 && i<=19){
         
-   document.write(numbersOneThruNineteen(i) + ", ")}
+   //document.write(numbersOneThruNineteen(i) + ", ")}
+   numbersString += numbersOneThruNineteen(i) + ", "}
     else if(i>=20 && i<=99){
-        
-       document.write(numbersTwentyThruNinetyNine(i) + ", ")
+        numbersString += numbersTwentyThruNinetyNine(i) + ", "
+       //document.write(numbersTwentyThruNinetyNine(i) + ", ")
     }
     else if(i>=100 && i <=999){
-        document.write(oneHunThrNn(i) + ", ")
+        numbersString += oneHunThrNn(i) + ", "
+        //document.write(oneHunThrNn(i) + ", ")
     }
     else {
-        document.write( "one-thousand")
+        numbersString += "one-thousand"
     }
    
 }
-    
+let newDiv = document.createElement("div")
+newDiv.innerHTML = numbersString
+container.appendChild(newDiv)   
 
 
 
